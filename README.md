@@ -41,8 +41,8 @@ pathway perturbation calculation.
 ``` r
 library(RIPPLET)
 
-# Demo inputs shipped with the package
-data(edgelist) # example STRING-like network (contextualized for SKCM)
+# Demo inputs shipped with the package (derived from TCGA-SKCM)
+data(edgelist) # example STRING-like network (tissue-contextualized for SKCM)
 data(mutmat)   # example TCGA-SKCM 0/1 mutation matrix (genes x samples)
 
 # End-to-end gene pipeline: network → normalize → RWR → similarity → GIS

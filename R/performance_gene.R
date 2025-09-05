@@ -29,7 +29,7 @@
 #' }
 #' @export
 personalized_perf <- function(global_ref, mut_mat, impact_scores, max_rank = NULL) {
-  # tiny local trapezoid integrator (no external dependency)
+  # trapezoid integrator
   trapz_local <- function(x, y) {
     if (length(x) < 2L) return(0)
     dx <- diff(x)
