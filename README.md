@@ -29,8 +29,8 @@ pathway inference in large cohorts and clinical sequencing contexts.
 You can install the development version of RIPPLET from GitHub:
 
 ``` r
-# install.packages("devtools")
-# devtools::install_github("YOUR_GITHUB_USERNAME/RIPPLET")
+install.packages("devtools")
+devtools::install_github("wiesmannf/RIPPLET")
 ```
 
 ## Quick start: Gene Impact Scores (recommended)
