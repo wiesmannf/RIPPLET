@@ -1,0 +1,27 @@
+Package: RIPPLET
+Type: Package
+Title: Random Walk-based Inference of Gene and Pathway Perturbations using Cohort-Level Data
+Version: 0.1.0
+Authors@R: c(
+  person("Fabius","Wiesmann", email="fabius@wiesmann.com", role=c("aut","cre")),
+  person("Junwei","Han",    role="cph", comment="Code adapted from PMAPscore"),
+  person("Yalan","He",      role="cph", comment="Code adapted from PMAPscore"),
+  person("Xiangmei","Li",   role="cph", comment="Code adapted from PMAPscore"))
+Description: RIPPLET transforms binary mutations into continuous gene and pathway scores.
+License: AGPL (>= 3)
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.3.1
+Suggests: 
+    progress,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Depends: R (>= 4.1)
+Imports: 
+    graphite,
+    igraph,
+    irlba,
+    lsa,
+    Matrix,
+    withr
+Roxygen: list(markdown = TRUE)

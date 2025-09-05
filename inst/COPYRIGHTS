@@ -1,0 +1,66 @@
+RIPPLET — Copyright and Third-Party Notices
+SPDX-License-Identifier: AGPL-3.0-or-later
+© 2024–2025 Fabius Wiesmann and contributors.
+
+License of RIPPLET
+------------------
+RIPPLET is distributed under the GNU Affero General Public License, version 3 or later (AGPL-3.0-or-later). See the LICENSE file.
+
+Third-Party Components
+----------------------
+graphite (Bioconductor)
+  - Purpose: Pathway retrieval and identifier conversion
+  - License: AGPL-3
+  - Upstream authors: Gabriele Sales, Enrica Calura, Duccio Cavalieri, Chiara Romualdi
+  - Reference: Sales G, Calura E, Cavalieri D, Romualdi C. BMC Bioinformatics (2012) 13:20. doi:10.1186/1471-2105-13-20
+  - Note: RIPPLET calls graphite through its public API. Any use of graphite’s non-exported internals (if present) is version-pinned and covered by graphite’s license.
+
+PMAPscore (CRAN)
+  - Purpose: Conceptual and code basis for SPIA-style pathway scoring adapted in RIPPLET
+  - License: GPL-2 | GPL-3 (dual-licensed)
+  - Upstream authors: Junwei Han; Yalan He; Xiangmei Li
+  - URL: https://CRAN.R-project.org/package=PMAPscore
+  - Notice: Portions of RIPPLET’s pathway-level code are derived from PMAPscore (we choose GPL-3 for those parts). The combined work is distributed under AGPL-3.0-or-later, which is compatible with GPL-3-licensed components.
+
+List of Adapted Files/Functions from PMAPscore
+----------------------------------------------
+Derived elements (with substantive modifications and rewrites):
+  - R/get_pps.R
+      * Based on PMAPscore::newspia() logic; adapted to accept RIPPLET gene scores,
+        support sparse solves, explicit NA handling for singular systems, and uniform
+        output tables (Pathway, sumpfs).
+  - R/norm_graphs.R
+      * SPIA-style normalization adapted for RIPPLET, including dampening for near-singular
+        systems and standardized naming/INFO outputs (invertible flag, sizes, etc.).
+  - R/get_npps.R
+      * New in RIPPLET: converts PPS tables to a normalized pathways×samples matrix
+        using per-pathway MaxHit denominators (computed via RIPPLET’s get_pps_max_hit()).
+  - R/ripplet_path.R
+      * New in RIPPLET: wrapper around get_pps() and get_npps().
+
+For the adapted parts above:
+  - Original work © the PMAPscore authors and contributors.
+  - RIPPLET authors selected the GPL-3 option for the adapted PMAPscore portions.
+  - Modifications © 2025 Fabius Wiesmann.
+
+Other Dependencies (runtime)
+----------------------------
+- igraph (GPL-2 | GPL-3)
+- Matrix (GPL-2 | GPL-3)
+- irlba (GPL-3)
+- lsa (GPL-2 | GPL-3)
+- progress (MIT; optional)
+
+These are dynamically linked or used via R’s package system; their licenses apply to their respective components only.
+
+Attribution Requirements
+------------------------
+If you publish results generated with RIPPLET:
+  1) Cite RIPPLET (see inst/CITATION).
+  2) Cite graphite if you used RIPPLET’s pathway retrieval/ID mapping.
+  3) Cite PMAPscore if you used RIPPLET’s pathway scoring (get_pps / get_npps / ripplet_path).
+
+Contact
+-------
+For questions about licensing or attribution, open an issue on the project repository.
+

@@ -1,0 +1,66 @@
+citHeader("To cite RIPPLET and related resources, please use:")
+
+# RIPPLET (package)
+bibentry(
+  bibtype = "Manual",
+  title   = "RIPPLET: A Mutation-Only Tool for Personalized Cancer Gene and Pathway Analysis in Precision Oncology",
+  author  = c(person("Fabius", "Wiesmann")),
+  year    = "2025",
+  note    = "R package version 0.1.0",
+  url     = "https://github.com/<your-org>/RIPPLET" #ADAPT
+)
+
+# graphite paper (pathway retrieval / ID conversion)
+bibentry(
+  bibtype = "Article",
+  title   = "graphite: a Bioconductor package to convert pathway topology to gene network",
+  author  = c(
+    person("Gabriele", "Sales"),
+    person("Enrica",   "Calura"),
+    person("Duccio",   "Cavalieri"),
+    person("Chiara",   "Romualdi")
+  ),
+  journal = "BMC Bioinformatics",
+  year    = "2012",
+  volume  = "13",
+  pages   = "20",
+  doi     = "10.1186/1471-2105-13-20"
+)
+
+# PMAPscore (adapted components for pathway-level scoring)
+bibentry(
+  bibtype = "Manual",
+  title   = "PMAPscore: Identify Prognosis-Related Pathways Altered by Somatic Mutation",
+  author  = c(
+    person("Junwei",   "Han"),
+    person("Yalan",    "He"),
+    person("Xiangmei", "Li")
+  ),
+  year    = "2025",
+  note    = "R package version 0.1.1",
+  url     = "https://CRAN.R-project.org/package=PMAPscore"
+)
+
+# PersonaDrive (npAUC evaluation strategy)
+bibentry(
+  bibtype = "Article",
+  title   = "PersonaDrive: a personalized driver gene identification framework through multiomics data integration",
+  author  = c(
+    person("Mehmet", "Erten"),
+    person("Mehmet", "Koyutürk")
+  ),
+  journal = "Bioinformatics",
+  year    = "2022",
+  volume  = "38",
+  number  = "17",
+  pages   = "4095--4103",
+  doi     = "10.1093/bioinformatics/btac329"
+)
+
+
+citFooter(paste(
+  "If you use RIPPLET's pathway retrieval or ID mapping utilities, please also cite Sales et al. (2012) for graphite.",
+  "If you use the pathway scoring functions (get_pps / get_npps / ripplet_path) adapted from PMAPscore, please also cite the PMAPscore package.",
+  "If you use RIPPLET's evaluation functions (personalized_perf), please also cite Erten and Koyutürk (2022) for PersonaDrive."
+))
+
