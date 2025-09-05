@@ -63,7 +63,7 @@ head(sort(gis[, 1], decreasing = TRUE), 10)
 **What you get:** `gis` is a genes × samples matrix with cohort-aware gene-impact scores scaled to [0,1] per sample.
 
 ## Gene Impact Scores: Minimal performance check (optional)
-RIPPLET reports **normalized partial AUCs (npAUCs)** for precision, recall, and F1 up to a dynamically chosen rank, following the evaluation strategy introduced in *PersonaDrive* (Erten *et al.*, 2022, *Bioinformatics*, doi:[10.1093/bioinformatics/btac329](https://doi.org/10.1093/bioinformatics/btac329)).
+RIPPLET reports **normalized partial AUCs (npAUCs)** for precision, recall, and F1 up to a dynamically chosen rank, following the evaluation strategy introduced in *PersonaDrive* (Erten *et al.*, 2022, *Bioinformatics*, doi: [10.1093/bioinformatics/btac329](https://doi.org/10.1093/bioinformatics/btac329)).
 ```{r performance-check, message=TRUE, warning=FALSE}
 library(RIPPLET)
 data(refgenes)  # example reference gene set (SKCM)
@@ -82,7 +82,7 @@ perf$auc_stats
 
 
 ## Quick start: Pathway Perturbation Scores
-**Heads-up:** Fetching & normalizing pathway graphs and running pathway perturbation scoring can be **compute-intensive**, especially with large pathway databases and cohorts. Consider reusing saved pathway objects (`saveRDS(pw, "pathways.rds")`) to avoid repeated fetching.
+**Heads-up:** Fetching & normalizing pathway graphs and running pathway perturbation scoring can be **compute-intensive**, especially with large pathway databases and cohorts. Consider reusing saved pathway objects (`saveRDS(pw,"pathways.rds")`) to avoid repeated fetching.
 ```{r quickstart-addpathways, message=TRUE, warning=FALSE}
 library(RIPPLET)
 data(edgelist)

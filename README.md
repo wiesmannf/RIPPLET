@@ -69,8 +69,8 @@ gene-impact scores scaled to \[0,1\] per sample.
 RIPPLET reports **normalized partial AUCs (npAUCs)** for precision,
 recall, and F1 up to a dynamically chosen rank, following the evaluation
 strategy introduced in *PersonaDrive* (Erten *et al.*, 2022,
-*Bioinformatics*,
-<doi:%5B10.1093/bioinformatics/btac329>\](<https://doi.org/10.1093/bioinformatics/btac329>)).
+*Bioinformatics*, doi:
+[10.1093/bioinformatics/btac329](https://doi.org/10.1093/bioinformatics/btac329)).
 
 ``` r
 library(RIPPLET)
@@ -93,7 +93,7 @@ perf$auc_stats
 **Heads-up:** Fetching & normalizing pathway graphs and running pathway
 perturbation scoring can be **compute-intensive**, especially with large
 pathway databases and cohorts. Consider reusing saved pathway objects
-(`saveRDS(pw, "pathways.rds")`) to avoid repeated fetching.
+(`saveRDS(pw,"pathways.rds")`) to avoid repeated fetching.
 
 ``` r
 library(RIPPLET)
