@@ -30,8 +30,8 @@ RIPPLET is designed for robust, transcriptome-independent driver gene & pathway 
 ## Installation
 You can install the development version of RIPPLET from GitHub:
 ```{r}
-# install.packages("devtools")
-# devtools::install_github("YOUR_GITHUB_USERNAME/RIPPLET")
+install.packages("devtools")
+devtools::install_github("wiesmannf/RIPPLET")
 ```
 
 
